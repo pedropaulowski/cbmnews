@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta id="viewport" name="viewport" content="width=device-width, user-scalable=no" />
+    <title>CBM - Corrupção Brasileira Memes</title>
+    
+    <script>
+        ( () => {
+            const token = localStorage.getItem('token') || null
+
+            if(token == null) 
+                window.location.href = "index.html"
+            }
+        )()
+    </script>
+
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/paineldecontrole.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+</head>
+<body>
+    <header>
+        <div><a href="/"><img src="images/logo_png.png" height="30px"/></a></div>
+    </header>
+    <div class="options">
+        <div id="criarNoticia"class="options-card">
+            <h3>Criar notícia</h3>
+        </div>
+        <div id="uploadImagens"class="options-card">
+            <h3>Upload de imagens</h3>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script src="scripts/paineldecontrole.js"></script>
+
+</body>
+</html>

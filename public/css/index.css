@@ -1,0 +1,325 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: #F9F9F9;
+
+}
+header {
+    background-color: #C4170C;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    position: fixed;
+    top:0px;
+    width: 100%;
+    color: white;
+    font-family: opensans,opensans-bastian,Arial,sans-serif;
+    font-weight: bold;
+    z-index: 5;
+}
+.search-input {
+    height: 30px;
+    border-radius: 5px;
+    width: 150px;
+    background-color: rgb(131, 13, 4);
+    color: white;
+    font-family: opensans,opensans-bastian,Arial,sans-serif;
+    font-size: 1rem;
+    border: 0px;
+    transform: 1s all linear;
+}
+
+.search-input::placeholder {
+    color: white;
+    font-weight: bolder;
+    padding-left: 20px;
+}
+
+.painel {
+    padding-top: 200px;
+    width: 100%;
+    min-width: 310px;
+    max-width: 1040px;
+    margin: auto;
+}
+.container-painel {
+    display: flex;
+    flex-wrap: wrap;
+}
+.painel-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    /* margin: 5px; */
+}
+.painel-news {
+    cursor: pointer;
+    width: 95%;
+    max-width: 510px;
+    min-width: 320px;
+    height: 270px;
+    /* border: 1px solid black; */
+    /* background-image: url("https://s2.glbimg.com/_CuO2HafdR8V_Hb4Am12Wta0JLM=/0x368:960x908/1080x608/smart/filters:max_age(3600)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2020/z/g/qyD0bSS3aDUhBzHwwQmQ/cufa.jpg");A ser feito dinamicamente com javascript */
+
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 3px; 
+    animation: scaleReverse 0.5s;  
+
+
+    display: flex;
+    flex-direction: column;
+    font-family: opensans,opensans-bastian,Arial,sans-serif;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+ 
+    background:
+        linear-gradient(
+        rgba(0, 0, 0, 0.7), 
+        rgba(0, 0, 0, 0.7)
+      ),
+      url("https://s2.glbimg.com/_CuO2HafdR8V_Hb4Am12Wta0JLM=/0x368:960x908/1080x608/smart/filters:max_age(3600)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2020/z/g/qyD0bSS3aDUhBzHwwQmQ/cufa.jpg")
+
+    ;
+
+    background-size: cover; 
+    background-position: center center;
+    
+ 
+    
+}
+
+.painel-news:hover {
+    animation: scale 0.3s;  
+    background-position: center center;
+    background-size: cover; 
+    background-size: 120%;
+}
+
+.categoria-painel {
+    display: flex;
+    margin: 10px;
+    position: absolute;
+    top: 5px;
+    left: 20px;
+}
+.title-painel {
+    position: absolute;
+    bottom: 45px;
+    left: 20px;
+    margin: 10px;
+}
+
+.descricao-painel {
+    position: absolute;
+    bottom: 5px;
+    left: 20px;
+    margin: 10px;
+}
+
+.container{
+    width: 100%;
+    max-width: 1040px;
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.noticias {
+    width: 65%;
+    margin-left:5px;
+}
+
+.card-noticias {
+    width: 100%;
+    min-width: 320px;
+    border-bottom: 2px solid rgb(100, 99, 99);
+    margin: 10px 0px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: flex-start;
+    flex-wrap: wrap;
+    cursor: pointer;
+}
+.img-noticia {
+    width: 49%;
+    max-width: 400px;
+    height: 220px;
+    min-width: 310px;
+
+    overflow: hidden;
+    margin: 20px 0px; 
+
+    background:
+      url("https://s2.glbimg.com/K28oHWbXOi6jXGi9U2sr97p7H8M=/0x0:1920x1080/540x304/smart/filters:max_age(3600)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2020/3/V/b1LIDZQFqAAAS5EdAcaQ/frame-00-02-26.121.jpg")
+    ;
+
+    background-size: cover; 
+    background-position: center center;
+    
+}
+
+.info-noticia {
+    width: 49%;
+    margin: 15px 5px;
+    font-family: opensans,opensans-bastian,Arial,sans-serif;
+    /* color: #C4170C; */
+    display: flex;
+    flex-direction: column;
+    min-width: 310px;
+}
+
+.titulo-noticia {
+    color: #C4170C;
+}
+.descricao-noticia {
+    color: black;
+    opacity: 0.7;
+    margin: 2rem 0;
+}
+
+.btn-red {
+    display: flex;
+    flex: 1;
+    /* margin: 10px 0; */
+    /* border: 1px solid black; */
+    justify-content: center;
+    align-items: center;
+    background-color: #C4170C;
+    height: 50px;
+    color: white;
+    font-family: opensans,opensans-bastian,Arial,sans-serif;
+    font-weight: 600; 
+    font-size: 0.9rem;
+    border-radius: 3px;
+    border-bottom: 2px solid  rgb(131, 13, 4);
+    margin: 20px 0;
+    cursor: pointer;
+}
+.aside {
+     width: 33%; 
+    /* height: 50vh; */
+    margin: 20px 5px;
+    border: 1px solid rgb(170, 170, 170);
+    border-radius: 3px;
+    background-color: white;
+}
+.header-aside {
+    display: flex;
+    height: 40px;
+    color: rgb(32, 32, 32);
+    border-bottom: 1px solid rgb(170, 170, 170);
+    align-items: center;
+    font-family: opensans,opensans-bastian,Arial,sans-serif;
+    font-weight: 600; 
+    font-size: 1rem;
+}
+.header-aside h4{
+    margin-left: 2rem;
+}
+
+.card-aside {
+    margin: 20px 3px;
+    font-family: opensans,opensans-bastian,Arial,sans-serif;
+    font-weight: 600; 
+    font-size: 0.9rem;
+    color: #C4170C;
+    display: flex;
+    border-bottom: 2px solid rgb(100, 99, 99);
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+.img-card-aside {
+    width: 50%;
+    height: 100px;
+    overflow: hidden;
+    margin: 20px 0px; 
+
+    background:
+      url("https://s2.glbimg.com/a0Vuikyk90u74FDYPfnopsZtAmA=/0x0:1600x961/94x94/smart/http://s2.glbimg.com/XwWPiXyKzN1neBmyu4uQLdIMSmI=/0x0:1600x961/1600x961/s.glbimg.com/jo/g1/f/original/2020/03/31/estrutura-do-corona_ZebiVaJ.jpg")
+    ;
+
+    background-size: cover; 
+    background-position: center center;
+    display: flex;
+    align-self: start;
+    max-width: 100px;
+}
+@keyframes scale {
+    0% {
+        background-size: 100%;
+        /* background-size: cover;  */
+    }
+
+    100% {
+        background-size: 120%;
+        /* background-size: cover; */
+    }
+ 
+}
+
+@keyframes scaleReverse {
+    0% {
+        background-size: 120%;
+        /* background-size: cover; */
+    }
+    
+    100% {
+        background-size: 100%;
+        /* background-size: cover; */
+    }
+     
+    }
+
+@media (max-width: 964px) {
+    .noticias {
+        width: 95%;
+    }
+    .aside {
+        width: 95%;
+    }
+    .card-noticias {
+        justify-content: center;
+    }
+    .painel-content {
+        width: 85%;
+    }
+    #menu-menu {
+        display: none;
+    }
+    .card-noticias {
+        margin: 10px 0px;
+        min-width: 310px;
+    }
+
+}
+
+@media (max-width: 691px) and (hover: none) {
+
+    .descricao-painel {
+        position: absolute;
+        bottom: -5px;
+        left: 20px;
+        margin: 10px;
+    }
+    .painel-news {
+        animation: none !important;
+    }
+
+    .painel-news:hover {
+        animation: none !important;
+        background-position: center center;
+        background-size: cover; 
+        background-size: 140%;
+    }
+
+
+}

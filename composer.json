@@ -1,0 +1,9 @@
+{
+    "autoload": {
+        "psr-4": {
+            "Classes\\": "Classes\\",
+            "Interfaces\\": "Interfaces\\",
+            "Dao\\": "Dao\\"
+        }
+    }
+}
