@@ -111,7 +111,7 @@ function criarPagina(noticia) {
     createOgTags('type', 'article')
     createOgTags('title', manchete)
     createOgTags('description', descricao)
-    createOgTags('image', capa)
+    createOgTags('image',`imagens/${capa}`)
 
 
 
@@ -173,8 +173,6 @@ function criarParagrafo(text, type) {
     }
 
 }
-
-carregarNoticia()
 
 function createMetaTags(name, content) {
     var meta = document.createElement('meta')
