@@ -53,6 +53,7 @@ if(isset($_GET['id'])) {
     <meta property="og:description"
         content="<?= $noticia['descricao'];?>">
     <meta property="fb:app_id" content="296276891401563">
+    <meta name="google-site-verification" content="Lgcv139i3UZl0BzySmZe_M0mpzuSj8HU5DXBRBOBS68" />
 </head>
 
 <body onload="carregarNoticia()">
