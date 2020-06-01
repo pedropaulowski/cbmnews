@@ -1,5 +1,3 @@
-
-
 function getAllUrlParams(url) {
 
     // get query string from url (optional) or window
@@ -71,11 +69,9 @@ function getIdNoticia() {
 }
 
 function carregarNoticia() {
-    var host = `https://${location.hostname}/services/noticias`
-    console.log(host)
     axios({
         method: 'get',
-        url: host,
+        url: '/services/noticias',
         params: {
             id : getIdNoticia(),
         }
