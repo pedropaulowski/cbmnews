@@ -47,8 +47,7 @@ if(isset($_GET['id'])) {
     <meta name="keywords" content="<?= $noticia['keywords'];?>">
     <meta property="og:url" content="http://www.cbmnews.ga/noticia.php?id=<?=$id?>">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="<?= $noticia['manchete'];?>"
-        content="<?= $noticia['descricao'];?>">
+    <meta property="og:title" content="<?= $noticia['manchete'];?>">
     <meta property="og:image" itemprop="image" content="http://www.cbmnews.ga/imagens/<?= $noticia['capa'];?>">
     <meta property="og:description"
         content="<?= $noticia['descricao'];?>">

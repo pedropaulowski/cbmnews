@@ -57,51 +57,6 @@ header {
     align-items: center;
     /* margin: 5px; */
 }
-.painel-news {
-    cursor: pointer;
-    width: 95%;
-    max-width: 510px;
-    min-width: 320px;
-    height: 270px;
-    /* border: 1px solid black; */
-    /* background-image: url("https://s2.glbimg.com/_CuO2HafdR8V_Hb4Am12Wta0JLM=/0x368:960x908/1080x608/smart/filters:max_age(3600)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2020/z/g/qyD0bSS3aDUhBzHwwQmQ/cufa.jpg");A ser feito dinamicamente com javascript */
-
-    border-radius: 5px;
-    overflow: hidden;
-    margin: 3px; 
-    animation: scaleReverse 0.5s;  
-
-
-    display: flex;
-    flex-direction: column;
-    font-family: opensans,opensans-bastian,Arial,sans-serif;
-    color: white;
-    align-items: center;
-    justify-content: center;
-    position: relative;
- 
-    background:
-        linear-gradient(
-        rgba(0, 0, 0, 0.7), 
-        rgba(0, 0, 0, 0.7)
-      ),
-      url("https://s2.glbimg.com/_CuO2HafdR8V_Hb4Am12Wta0JLM=/0x368:960x908/1080x608/smart/filters:max_age(3600)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2020/z/g/qyD0bSS3aDUhBzHwwQmQ/cufa.jpg")
-
-    ;
-
-    background-size: cover; 
-    background-position: center center;
-    
- 
-    
-}
-
-.painel-news:hover {
-    animation: scale 0.3s;  
-    background-position: center center;
-    background-size: cover; 
-    background-size: 120%;
-}
 
 .categoria-painel {
     display: flex;
@@ -148,23 +103,7 @@ header {
     flex-wrap: wrap;
     cursor: pointer;
 }
-.img-noticia {
-    width: 49%;
-    max-width: 400px;
-    height: 220px;
-    min-width: 310px;
 
-    overflow: hidden;
-    margin: 20px 0px; 
-
-    background:
-      url("https://s2.glbimg.com/K28oHWbXOi6jXGi9U2sr97p7H8M=/0x0:1920x1080/540x304/smart/filters:max_age(3600)/https://i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2020/3/V/b1LIDZQFqAAAS5EdAcaQ/frame-00-02-26.121.jpg")
-    ;
-
-    background-size: cover; 
-    background-position: center center;
-    
-}
 
 .info-noticia {
     width: 49%;

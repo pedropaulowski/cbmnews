@@ -8,6 +8,16 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
     <meta name="google-site-verification" content="Lgcv139i3UZl0BzySmZe_M0mpzuSj8HU5DXBRBOBS68" />
+    <meta name="author" content="Corrupção Brasileira Memes">
+    <meta name="description"
+        content="Deus tenha misericórdia dessa nação!">
+    <meta property="og:url" content="http://www.cbmnews.ga/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="CBM - Corrupção Brasileira Memes">
+    <meta property="og:image" itemprop="image" content="http://www.cbmnews.ga/images/image_cbm.png">
+    <meta property="og:description"
+        content="Deus tenha misericórdia dessa nação">
+    <meta property="fb:app_id" content="296276891401563">
     <link rel="canonical" href="http://www.cbmnews.ga/index.html">
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -20,54 +30,23 @@
     </script>
     <script data-ad-client="ca-pub-8937799981719207" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
-<body>
+<body onload="getAllNoticias()">
     <header>
         <div><i class="fas fa-bars"></i><a id="menu-menu"> MENU</a></div>
         <div><a href="/"><img src="images/logo_png.png" height="30px"/></a></div>
         <div><input id="search-input" type="text" class="search-input" placeholder="BUSCAR"/></div>
     </header>
     <div class="painel">
-        <div class="container-painel">
-            <div class="painel-content">
-                <div class="painel-news ">
-                    <h5 class="categoria-painel">Caminho das doações</h5>
-                    <h2 class="title-painel">Para onde vai o dinheiro arrecadado nas lives da quarentena?</h2>
-                    <li class="descricao-painel">Lives de hoje: Bon Jovi, Whindersson Nunes e mais shows para ver em casa</li>
-                </div>
-                <div class="painel-news ">
-                    <h5 class="categoria-painel">Caminho das doações</h5>
-                    <h2 class="title-painel">Para onde vai o dinheiro arrecadado nas lives da quarentena?</h2>
-                    <li class="descricao-painel">Lives de hoje: Bon Jovi, Whindersson Nunes e mais shows para ver em casa</li>
-                </div>
-            </div>
-            <div class="painel-content">
-                <div class="painel-news ">
-                    <h5 class="categoria-painel">Caminho das doações</h5>
-                    <h2 class="title-painel">Para onde vai o dinheiro arrecadado nas lives da quarentena?</h2>
-                    <li class="descricao-painel">Lives de hoje: Bon Jovi, Whindersson Nunes e mais shows para ver em casa</li>
-                </div>
-                <div class="painel-news ">
-                    <h5 class="categoria-painel">Caminho das doações</h5>
-                    <h2 class="title-painel">Para onde vai o dinheiro arrecadado nas lives da quarentena?</h2>
-                    <li class="descricao-painel">Lives de hoje: Bon Jovi, Whindersson Nunes e mais shows para ver em casa</li>
-                </div>
-            </div>
-        </div>
+ 
 
     </div>
     <div class="container">
         <div class="noticias">
-            <div class="card-noticias">
-                <div class="img-noticia"></div>
-                <div class="info-noticia">
-                    <div class="titulo-noticia"><h2>Paulo Marinho diz ter provas de vazamento da PF a Flávio Bolsonaro</h2></div>
-                    <div class="descricao-noticia">PGR quer ouvir o empresário no inquérito que apura se o presidente tentou interferir na PF.</div>
-                </div>
-            </div>
-            <div class="btn-red">VEJA MAIS</div>
+
+            <div id="btn-more" class="btn-red">VEJA MAIS</div>
 
         </div>
-        <div class="aside">
+        <!---<div class="aside">
             <div class="content-aside">
                 <div class="header-aside">
                     <h4>Fato ou Fake</h4>
@@ -77,9 +56,10 @@
                     <div class="img-card-aside"></div>
                 </div>
             </div>
-        </div>
+        </div>-->
 
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
     <script src="scripts/index.js"></script>
 </body>
