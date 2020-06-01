@@ -105,7 +105,6 @@ function publicarNoticia() {
         if(response.data.link != null && response.data.link != undefined) {
             window.location.href = response.data.link
         }
-            
     })
 }
 

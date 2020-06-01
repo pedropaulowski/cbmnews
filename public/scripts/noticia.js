@@ -107,6 +107,13 @@ function criarPagina(noticia) {
     createMetaTags('description', descricao)
     createMetaTags('keywords', keywords)
 
+    createOgTags('url', window.location.href)
+    createOgTags('type', 'article')
+    createOgTags('title', manchete)
+    createOgTags('description', descricao)
+    createOgTags('image', capa)
+
+
 
 
 }

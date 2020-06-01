@@ -67,7 +67,6 @@ switch($method) {
             switch($action) {
                 case "newNoticia":
                     $token = $parametros['token'];
-    
                     if($usuarioDb->getUserByToken($token) != false) {
                         $noticia = new Noticia;
                         $manchete = $parametros['manchete'];
@@ -80,7 +79,6 @@ switch($method) {
 
                         $noticia->createNoticia( $id, $manchete, $keywords, $descricao, $paragrafos, $capa, $categoria);
                         
-
                         if($noticiaDb->add($noticia)) {
                             http_response_code(200);
                             $reponse = [

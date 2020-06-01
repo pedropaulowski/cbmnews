@@ -39,7 +39,8 @@ switch($method) {
             $envio = $imagemDb->add($i);
 
             if($envio) {
-                move_uploaded_file($imagem['tmp_name'], $_SERVER['DOCUMENT_ROOT']. '' . $nomeImagem);
+                move_uploaded_file($imagem['tmp_name'], $_SERVER['DOCUMENT_ROOT']. 'imagens/' . $nomeImagem);
+                http_response_code(201);
 
             } else {
 

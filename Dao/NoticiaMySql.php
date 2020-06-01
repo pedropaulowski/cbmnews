@@ -2,6 +2,7 @@
 
 namespace Dao;
 
+use PDOException;
 use PDO;
 use Interfaces\NoticiaDao;
 
@@ -49,7 +50,7 @@ class NoticiaMySql implements NoticiaDao {
         $sql->bindValue(":capa",$capa);
         $sql->bindValue(":categoria", $categoria);
         $sql->execute();
-
+  
         if( count($this->getNoticiaById($id)) > 0)
             return true;
         else 
