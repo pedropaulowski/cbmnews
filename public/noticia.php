@@ -34,6 +34,7 @@ if(isset($_GET['id'])) {
 
 <head>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" href="images/logo_svg.svg" />
     <meta id="viewport" name="viewport" content="width=device-width, user-scalable=no" />
     <title><?= $noticia['manchete'];?></title>
     <link rel="stylesheet" href="css/index.css">
