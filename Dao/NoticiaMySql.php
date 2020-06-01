@@ -29,7 +29,8 @@ class NoticiaMySql implements NoticiaDao {
             descricao,
             paragrafos,
             capa,
-            categoria
+            categoria,
+            hora
         ) 
         VALUES (
             :id,
@@ -38,7 +39,8 @@ class NoticiaMySql implements NoticiaDao {
             :descricao,
             :paragrafos,
             :capa,
-            :categoria
+            :categoria,
+            NOW()
         )";
 
         $sql = $this->pdo->prepare($sql);
@@ -61,9 +63,24 @@ class NoticiaMySql implements NoticiaDao {
         $sql = "SELECT * FROM noticias ORDER BY hora DESC";
         $sql = $this->pdo->query($sql);
         
-        if($sql->rowCount() > 0) 
-            return $sql->fetchAll(PDO::FETCH_ASSOC);
-        else 
+        if($sql->rowCount() > 0) {
+            $sql = $sql->fetchAll(PDO::FETCH_ASSOC);
+            $noticias = [];
+            foreach($sql as $noticia) {
+                $noticias[] = [
+                    'id' => $noticia['id'],
+                    'manchete' => $noticia['manchete'],
+                    'descricao' => ($noticia['descricao']),
+                    'paragrafos' => utf8_encode($noticia['paragrafos']),
+                    'hora' => $noticia['hora'],
+                    'capa' => $noticia['capa'],
+                    'keywords' => $noticia['keywords'],
+                    'categoria' => $noticia['categoria'],
+                    'autor' => $noticia['autor']
+                ];
+            }
+            return $noticias;
+        } else 
             return [];
 
     }

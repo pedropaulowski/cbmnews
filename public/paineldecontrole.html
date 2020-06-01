@@ -6,13 +6,9 @@
     <title>CBM - Corrupção Brasileira Memes</title>
     
     <script>
-        ( () => {
-            const token = localStorage.getItem('token') || null
-
-            if(token == null) 
-                window.location.href = "index.html"
-            }
-        )()
+        const token = localStorage.getItem('token') || null
+        if(token == null) 
+            window.location.href = "index.html"
     </script>
 
     <link rel="stylesheet" href="css/index.css">

@@ -48,8 +48,8 @@ class UsuarioMySql implements UsuarioDao {
 
     public function logIn($email, $senha) {
         $senhaDb = $this->getSenha($email);
-            
-        if(password_verify($senha, $senhaDb)) {
+
+        if(password_verify($senha, trim($senhaDb))) {
             $hora = date("Y-m-d H:i:s");
             $token = $this->setTokenUsuario($email, password_hash($email.$hora, PASSWORD_BCRYPT));
             return $token;
@@ -75,7 +75,6 @@ class UsuarioMySql implements UsuarioDao {
         $sql = $this->pdo->prepare($sql);
         $sql->bindValue(":email", $email);
         $sql->execute();
-
         if($sql->rowCount() > 0) {
             $usuario = $sql->fetch(PDO::FETCH_ASSOC);
             return $usuario['senha'];

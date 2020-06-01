@@ -115,15 +115,14 @@ switch($method) {
             // var_dump($noticiaDb->getNoticiaById($_GET['id']));
             echo json_encode($noticiaDb->getNoticiaById($_GET['id']));
             exit;
-        } /*else if(isset($_GET['search'])) {
+        } else if(isset($_GET['search'])) {
             $termo = $_GET['search'];
             echo json_encode(array_map("utf8_encode", $noticiaDb->searchNoticia($termo)));
             exit;
         } else {
-            echo json_encode(array_map("utf8_encode",$noticiaDb->getAllNoticias()));
+            echo json_encode($noticiaDb->getAllNoticias());
             exit;
-
-        }*/
+        }
         
     break;
 
