@@ -182,20 +182,22 @@ function createPrincipalCards(noticias) {
     document.getElementsByClassName('painel')[0].innerHTML = html
     var painelnews = document.getElementsByClassName('painel-news')
     for(let j in painelnews) {
-        painelnews[j].onmouseover = () => {
-            painelnews[j].style.transition = "all linear 0.3s"; 
-            painelnews[j].style.backgroundPosition = `center center;`
-            // painelnews[j].style.backgroundSize =  `cover`; 
-            painelnews[j].style.backgroundSize = `120%`;
-            painelnews[j].style.backgroundRepeat = 'no-repeat';
+        if(window.innerWidth > 1014) {
+            painelnews[j].onmouseover = () => {
+                painelnews[j].style.transition = "all linear 0.3s"; 
+                painelnews[j].style.backgroundPosition = `center center;`
+                // painelnews[j].style.backgroundSize =  `cover`; 
+                painelnews[j].style.backgroundSize = `120%`;
+                painelnews[j].style.backgroundRepeat = 'no-repeat';
 
-        }
-        painelnews[j].onmouseout = () => {
-            painelnews[j].style.transition = "all linear 0.3s"; 
-            painelnews[j].style.backgroundPosition = `center center;`
-            // painelnews[j].style.backgroundSize =  `cover`; 
-            painelnews[j].style.backgroundSize = `100%`;
-            painelnews[j].style.backgroundRepeat = 'no-repeat';
+            }
+            painelnews[j].onmouseout = () => {
+                painelnews[j].style.transition = "all linear 0.3s"; 
+                painelnews[j].style.backgroundPosition = `center center;`
+                // painelnews[j].style.backgroundSize =  `cover`; 
+                painelnews[j].style.backgroundSize = `100%`;
+                painelnews[j].style.backgroundRepeat = 'no-repeat';
+            }
         }
     }
 }
