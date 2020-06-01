@@ -76,7 +76,8 @@ function carregarNoticia() {
         url: '/services/noticias',
         params: {
             id : getIdNoticia(),
-        }
+        },
+        httpsAgent: new https.Agent({ rejectUnauthorized: false })
     })
     .then(function (response) {
         criarPagina(response.data)
