@@ -81,6 +81,11 @@ if(isset($_GET['id'])) {
 
         </section>
     </article>
+    <div class="noticias-noticia" >
+
+        <div id="btn-more" class="btn-red">VEJA MAIS</div>
+
+    </div>
     <footer>
         <div class="content-footer">
             <div><a href="/"><img src="images/logo_png.png" height="30px"/></a></div>

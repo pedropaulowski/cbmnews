@@ -103,6 +103,14 @@ footer {
     width: 65%;
     margin-left:5px;
 }
+.noticias-noticia {
+    max-width: 1040px;
+    width: 95%;
+    margin-left:5px;
+    margin: auto;
+    margin-top: 100px;
+
+}
 
 .card-noticias {
     width: 100%;

@@ -188,3 +188,60 @@ function createOgTags(property, content) {
     var head = document.getElementsByTagName('head')[0]
     head.append(meta)
 }
+
+
+var start = 0; 
+var button = document.getElementById('btn-more')
+function getAllNoticias() {
+    axios.get('/services/noticias/', {
+    })
+    .then(function (response) {
+        var noticias = response.data
+        createNoticiasSecundarias(noticias)
+        button.onclick = () => {createNoticiasSecundarias(noticias)}
+    })
+}
+
+getAllNoticias()
+
+function createNoticiasSecundarias(noticias) {
+    let i = start;
+
+    var div = document.createElement('div')
+    
+    for(i; i < start+4; i++) {
+        if(noticias[i] != undefined) {
+            let html = `
+            <div class="card-noticias" onclick="redirecTo('noticia.php?id=${noticias[i].id}')">
+                <div class="img-noticia" style="
+                width: 49%;
+                max-width: 400px;
+                height: 220px;
+                min-width: 310px;
+            
+                overflow: hidden;
+                margin: 20px 0px; 
+            
+                background:
+                  url('imagens/${noticias[i].capa}')
+                ;
+            
+                background-size: cover; 
+                background-position: center center;"></div>
+                <div class="info-noticia">
+                    <div class="titulo-noticia"><h2>${noticias[i].manchete}</h2></div>
+                    <div class="descricao-noticia">${noticias[i].descricao.substring(0, 200)}</div>
+                </div>
+            </div>`
+            div.innerHTML += html
+            document.getElementsByClassName('noticias-noticia')[0].insertBefore(div, button)
+        } else {
+            button.style.display = 'none'
+        }
+    }
+    start +=4;
+}
+
+function redirecTo(link) {
+    window.location.href = link
+}

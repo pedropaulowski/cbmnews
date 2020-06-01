@@ -216,7 +216,7 @@ function createNoticiasSecundarias(noticias) {
     for(i; i < start+4; i++) {
         if(noticias[i] != undefined) {
             let html = `
-            <div class="card-noticias">
+            <div class="card-noticias" onclick="redirecTo('noticia.php?id=${noticias[i].id}')">
                 <div class="img-noticia" style="
                 width: 49%;
                 max-width: 400px;
