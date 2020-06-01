@@ -71,9 +71,10 @@ function getIdNoticia() {
 }
 
 function carregarNoticia() {
+    var host = location.hostname
     axios({
         method: 'get',
-        url: 'https://services/noticias',
+        url: `https://${host}/services/noticias`,
         params: {
             id : getIdNoticia(),
         }
