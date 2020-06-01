@@ -44,13 +44,14 @@ if(isset($_GET['id'])) {
     <meta name="description"
         content="<?= $noticia['descricao'];?>">
     <meta name="keywords" content="<?= $noticia['keywords'];?>">
-    <meta property="og:url" content="http://www.cbmnews.ga/noticia.php?id=<?=$id?>">
+    <meta property="og:url" content="https://www.cbmnews.ga/noticia.php?id=<?=$id?>">
     <meta property="og:type" content="article">
     <meta property="og:title" content="<?= $noticia['manchete'];?>"
         content="<?= $noticia['descricao'];?>">
-    <meta property="og:image" content="imagens/<?= $noticia['capa'];?>">
+    <meta property="og:image" content="https://www.cbmnews.ga/imagens/<?= $noticia['capa'];?>">
     <meta property="og:description"
         content="<?= $noticia['descricao'];?>">
+    <meta property="fb:app_id" content="296276891401563">
 </head>
 
 <body onload="carregarNoticia()">
