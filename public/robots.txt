@@ -49,8 +49,8 @@ Disallow: */zipball/
 
 Disallow: /account-login
 Disallow: /Explodingstuff/
-Disallow: /paineldecontrole.html
-Disallow: /login.html
-Disallow: /uploadimagens.html
-Disallow: /criarnoticia.html
+Disallow: paineldecontrole.html
+Disallow: login.html
+Disallow: uploadimagens.html
+Disallow: criarnoticia.html
 
