@@ -20,6 +20,18 @@ header {
     font-weight: bold;
     z-index: 5;
 }
+
+footer {
+    background-color: #C4170C;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    color: white;
+    font-family: opensans,opensans-bastian,Arial,sans-serif;    z-index: 5;
+
+}
 .search-input {
     height: 30px;
     border-radius: 5px;

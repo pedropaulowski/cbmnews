@@ -81,6 +81,15 @@ if(isset($_GET['id'])) {
 
         </section>
     </article>
+    <footer>
+        <div class="content-footer">
+            <div><a href="/"><img src="images/logo_png.png" height="30px"/></a></div>
+            <div>Últimas notícias</div>
+        </div>
+        <div class="content-footer">
+            <div>© Copyright 2020-2020 Corrupção Brasileira Memes</div>
+        </div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="scripts/noticia.js"></script>
 </body>
