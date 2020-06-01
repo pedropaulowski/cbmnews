@@ -101,8 +101,7 @@ function criarPagina(noticia) {
     for(let i in paragrafos)
         document.getElementsByTagName('section')[0].append(criarParagrafo(paragrafos[i].text, paragrafos[i].type))
 
-    document.getElementsByTagName('title')[0].innerHTML = manchete
-    /*
+        /*
     createMetaTags('author', autor)
     createMetaTags('description', descricao)
     createMetaTags('keywords', keywords)
