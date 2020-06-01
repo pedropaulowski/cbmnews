@@ -55,6 +55,7 @@ if(isset($_GET['id'])) {
     <meta property="fb:app_id" content="296276891401563">
     <meta name="google-site-verification" content="Lgcv139i3UZl0BzySmZe_M0mpzuSj8HU5DXBRBOBS68" />
     <link rel="canonical" href="http://www.cbmnews.ga/noticia.php?id=<?=$id?>">
+    <script data-ad-client="ca-pub-8937799981719207" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 
 <body onload="carregarNoticia()">
