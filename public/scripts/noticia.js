@@ -73,11 +73,10 @@ function getIdNoticia() {
 function carregarNoticia() {
     axios({
         method: 'get',
-        url: '/services/noticias',
+        url: 'https://services/noticias',
         params: {
             id : getIdNoticia(),
-        },
-        httpsAgent: new Agent({ rejectUnauthorized: false })
+        }
     })
     .then(function (response) {
         criarPagina(response.data)
