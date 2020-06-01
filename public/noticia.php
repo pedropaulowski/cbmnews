@@ -49,6 +49,8 @@ if(isset($_GET['id'])) {
     <meta property="og:title" content="<?= $noticia['manchete'];?>"
         content="<?= $noticia['descricao'];?>">
     <meta property="og:image" content="imagens/<?= $noticia['capa'];?>">
+    <meta property="og:description"
+        content="<?= $noticia['descricao'];?>">
 </head>
 
 <body onload="carregarNoticia()">
