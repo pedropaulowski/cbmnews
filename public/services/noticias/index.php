@@ -117,7 +117,7 @@ switch($method) {
             exit;
         } else if(isset($_GET['search'])) {
             $termo = $_GET['search'];
-            echo json_encode(array_map("utf8_encode", $noticiaDb->searchNoticia($termo)));
+            echo json_encode($noticiaDb->searchNoticia($termo));
             exit;
         } else {
             echo json_encode($noticiaDb->getAllNoticias());

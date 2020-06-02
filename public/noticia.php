@@ -61,7 +61,7 @@ if(isset($_GET['id'])) {
     <header>
         <div><i class="fas fa-bars"></i><a id="menu-menu">MENU</a></div>
         <div><a href="/"><img src="images/logo_png.png" height="30px" /></a></div>
-        <div><input id="search-input" type="text" class="search-input" placeholder="BUSCAR" /></div>
+        <!-- <div><input id="search-input" type="text" class="search-input" placeholder="BUSCAR" /></div> -->
     </header>
     <article>
         <div class="header-noticia">

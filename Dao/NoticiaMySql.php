@@ -110,15 +110,17 @@ class NoticiaMySql implements NoticiaDao {
     }
 
     public function searchNoticia($termo) {
-        $sql = "SELECT * FROM noticias WHERE (machente LIKE :termo OR descricao LIKE :termo OR keywords LIKE :termo )";
-        $sql = $this->pdo->prepare($sql);
-        $sql->bindValue(":termo","%$termo%", PDO::PARAM_STR);
-        $sql->execute();
-        
-        if($sql->rowCount() > 0) 
-            return $sql->fetchAll(PDO::FETCH_ASSOC);
-        else 
+        $termo = filter_var($termo, FILTER_SANITIZE_SPECIAL_CHARS);
+        if($termo) {
+            $sql = "SELECT * FROM noticias WHERE manchete LIKE '%$termo%' OR descricao LIKE '%$termo%' OR keywords LIKE '%$termo%'";
+            $sql = $this->pdo->query($sql);
+            if($sql->rowCount() > 0) 
+                return $sql->fetchAll(PDO::FETCH_ASSOC);
+            else 
+                return [];
+        } else {
             return [];
+        }
     }
 
     public function delete($id) {
