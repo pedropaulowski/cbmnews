@@ -1,7 +1,7 @@
 var start = 4; 
 var button = document.getElementById('btn-more')
 function getAllNoticias() {
-    axios.get('https://www.cbmnews.ga/services/noticias/', {
+    axios.get('http://www.cbmnews.ga/services/noticias/', {
     })
     .then(function (response) {
         var noticias = response.data

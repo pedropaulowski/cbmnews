@@ -9,7 +9,7 @@ $(function(){
 
         $.ajax({
             type: 'POST',
-            url:'https://www.cbmnews.ga/services/imagens/',
+            url:'http://www.cbmnews.ga/services/imagens/',
             contentType:false,
             data: formData,
             processData:false,

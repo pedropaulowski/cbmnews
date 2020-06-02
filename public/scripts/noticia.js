@@ -71,7 +71,7 @@ function getIdNoticia() {
 function carregarNoticia() {
     axios({
         method: 'get',
-        url: 'https://www.cbmnews.ga/services/noticias/',
+        url: 'http://www.cbmnews.ga/services/noticias/',
         params: {
             id : getIdNoticia(),
         }
@@ -193,7 +193,7 @@ function createOgTags(property, content) {
 var start = 0; 
 var button = document.getElementById('btn-more')
 function getAllNoticias() {
-    axios.get('https://www.cbmnews.ga/services/noticias/', {
+    axios.get('http://www.cbmnews.ga/services/noticias/', {
     })
     .then(function (response) {
         var noticias = response.data
