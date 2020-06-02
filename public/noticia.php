@@ -45,15 +45,15 @@ if(isset($_GET['id'])) {
     <meta name="description"
         content="<?= $noticia['descricao'];?>">
     <meta name="keywords" content="<?= $noticia['keywords'];?>">
-    <meta property="og:url" content="http://www.cbmnews.ga/noticia.php?id=<?=$id?>">
+    <meta property="og:url" content="https://www.cbmnews.ga/noticia.php?id=<?=$id?>">
     <meta property="og:type" content="article">
     <meta property="og:title" content="<?= $noticia['manchete'];?>">
-    <meta property="og:image" itemprop="image" content="http://www.cbmnews.ga/imagens/<?= $noticia['capa'];?>">
+    <meta property="og:image" itemprop="image" content="https://www.cbmnews.ga/imagens/<?= $noticia['capa'];?>">
     <meta property="og:description"
         content="<?= $noticia['descricao'];?>">
     <meta property="fb:app_id" content="296276891401563">
     <meta name="google-site-verification" content="Lgcv139i3UZl0BzySmZe_M0mpzuSj8HU5DXBRBOBS68" />
-    <link rel="canonical" href="http://www.cbmnews.ga/noticia.php?id=<?=$id?>">
+    <link rel="canonical" href="https://www.cbmnews.ga/noticia.php?id=<?=$id?>">
     <script data-ad-client="ca-pub-8937799981719207" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 
