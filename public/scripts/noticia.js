@@ -130,7 +130,8 @@ function criarParagrafo(text, type) {
         
         case 'img':
             var html_code = `
-            <div style="background:url('imagens/${text}')"id="${text}" class="img-section-noticia">
+            <div style="background:url('imagens/${text}')"id="${text};background-size: cover;
+            background-position: center center;" class="img-section-noticia">
             </div>
             `
             div.innerHTML = html_code
