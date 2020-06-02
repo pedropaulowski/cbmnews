@@ -91,7 +91,7 @@ function publicarNoticia() {
     let keywords = document.getElementById('keywords').value.trim();
     let categoria = 1
 
-    axios.post('/services/noticias/', {
+    axios.post('https://www.cbmnews.ga/services/noticias/', {
         action : "newNoticia",
         token : token,
         descricao : descricao,
@@ -115,7 +115,7 @@ function deleteParagrafo(paragrafo) {
 function carregarImagens() {
     axios({
         method: 'get',
-        url: '/services/imagens',
+        url: 'https://www.cbmnews.ga/services/imagens/',
     })
     .then(function (response) {
         let json = response.data
