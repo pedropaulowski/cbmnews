@@ -44,9 +44,9 @@ section {
     min-width: 320px;
     overflow: hidden;
     margin: 20px 0px; 
-
+/*
     background-size: cover; 
-    background-position: center center;
+    background-position: center center;*/
 }
 .video-yt-noticia{
     width: 80%;
