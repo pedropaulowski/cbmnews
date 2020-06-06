@@ -4,7 +4,7 @@ btn.onclick = () => {
     let email = document.getElementById("email").value
     let senha = document.getElementById("senha").value
 
-    axios.post('http://www.cbmnews.ga/services/usuarios/', {
+    axios.post('/services/usuarios/', {
         action: 'logIn',
         email: email,
         senha: senha

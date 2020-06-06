@@ -71,6 +71,10 @@ function createNewParagrafo() {
                 Video
             </label>
             <input type="radio" value="video" name="paragrafos[${qtd+1}]"/>
+            <label for="subtopico">
+                Sub-Tópico
+            </label>
+            <input type="radio" value="subtopico" name="paragrafos[${qtd+1}]"/>
             <button onclick="deleteParagrafo(${qtd+1})" class="btn-close">APAGAR</button>                        
         </div>
     `
@@ -91,7 +95,7 @@ function publicarNoticia() {
     let keywords = document.getElementById('keywords').value.trim();
     let categoria = 1
 
-    axios.post('http://www.cbmnews.ga/services/noticias/', {
+    axios.post('/services/noticias/', {
         action : "newNoticia",
         token : token,
         descricao : descricao,
@@ -115,7 +119,7 @@ function deleteParagrafo(paragrafo) {
 function carregarImagens() {
     axios({
         method: 'get',
-        url: 'http://www.cbmnews.ga/services/imagens/',
+        url: '/services/imagens/',
     })
     .then(function (response) {
         let json = response.data

@@ -9,13 +9,15 @@ $(function(){
 
         $.ajax({
             type: 'POST',
-            url:'http://www.cbmnews.ga/services/imagens/',
+            url:'/services/imagens/',
             contentType:false,
             data: formData,
             processData:false,
             success:function(response) {
                 var json = JSON.parse(response)           
-                console.log(json)
+              
+                document.getElementById('img-submited').setAttribute('src', `imagens/${json.id}`)
+
             }
         })
     })

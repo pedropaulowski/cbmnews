@@ -1,7 +1,7 @@
 var start = 4; 
 var button = document.getElementById('btn-more')
 function getAllNoticias() {
-    axios.get('http://www.cbmnews.ga/services/noticias/', {
+    axios.get('/services/noticias/', {
     })
     .then(function (response) {
         var noticias = response.data
@@ -58,7 +58,7 @@ function createPrincipalCards(noticias) {
         ;">
                 <h5 class="categoria-painel">News</h5>
                 <h2 class="title-painel">${noticias[i].manchete.substring(0, 150)}</h2>
-                <li class="descricao-painel">${noticias[i].descricao.substring(0, 120)}</li>
+                <li class="descricao-painel">${noticias[i].descricao.substring(0, 120)}...</li>
             </div>
             <div class="painel-news" onclick="redirecTo('/noticia.php?id=${noticias[i+1].id}')" style="
             transtion: all linear 0.3s;
@@ -95,7 +95,7 @@ function createPrincipalCards(noticias) {
         ;">
                 <h5 class="categoria-painel">News</h5>
                 <h2 class="title-painel">${noticias[i+1].manchete.substring(0, 150)}</h2>
-                <li class="descricao-painel">${noticias[i+1].descricao.substring(0, 120)}</li>
+                <li class="descricao-painel">${noticias[i+1].descricao.substring(0, 120)}...</li>
             </div>
         </div>
         <div class="painel-content">
@@ -136,7 +136,7 @@ function createPrincipalCards(noticias) {
             ;">
                 <h5 class="categoria-painel">News</h5>
                 <h2 class="title-painel">${noticias[i+2].manchete.substring(0, 150)}</h2>
-                <li class="descricao-painel">${noticias[i+2].descricao.substring(0, 120)}</li>
+                <li class="descricao-painel">${noticias[i+2].descricao.substring(0, 120)}...</li>
             </div>
             <div class="painel-news" onclick="redirecTo('/noticia.php?id=${noticias[i+3].id}')"
             style="
@@ -174,7 +174,7 @@ function createPrincipalCards(noticias) {
             ;">
                 <h5 class="categoria-painel">News</h5>
                 <h2 class="title-painel">${noticias[i+3].manchete.substring(0, 150)}</h2>
-                <li class="descricao-painel">${noticias[i+3].descricao.substring(0, 120)}</li>
+                <li class="descricao-painel">${noticias[i+3].descricao.substring(0, 120)}...</li>
             </div>
         </div>
     </div>`

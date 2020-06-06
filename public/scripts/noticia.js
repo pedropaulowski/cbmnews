@@ -71,7 +71,7 @@ function getIdNoticia() {
 function carregarNoticia() {
     axios({
         method: 'get',
-        url: 'http://www.cbmnews.ga/services/noticias/',
+        url: '/services/noticias/',
         params: {
             id : getIdNoticia(),
         }
@@ -168,6 +168,24 @@ function criarParagrafo(text, type) {
             return div
 
         break;
+
+        case 'subtopico':
+            var html_code = `        
+                    <h4 style="text-align: left;">
+                    ${text}
+                    </h4>
+            `
+            div.style = `                    
+            width: 100%;
+            max-width: 1040px;
+
+            margin: auto;
+            display: flex; 
+            justify-content: flex-start;`
+            div.innerHTML = html_code
+            return div
+
+        break;
     }
 
 }
@@ -194,7 +212,7 @@ function createOgTags(property, content) {
 var start = 0; 
 var button = document.getElementById('btn-more')
 function getAllNoticias() {
-    axios.get('http://www.cbmnews.ga/services/noticias/', {
+    axios.get('/services/noticias/', {
     })
     .then(function (response) {
         var noticias = response.data

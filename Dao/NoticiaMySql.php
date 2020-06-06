@@ -110,14 +110,40 @@ class NoticiaMySql implements NoticiaDao {
     }
 
     public function searchNoticia($termo) {
+        $noticias = [];
         $termo = filter_var($termo, FILTER_SANITIZE_SPECIAL_CHARS);
         if($termo) {
-            $sql = "SELECT * FROM noticias WHERE manchete LIKE '%$termo%' OR descricao LIKE '%$termo%' OR keywords LIKE '%$termo%'";
-            $sql = $this->pdo->query($sql);
-            if($sql->rowCount() > 0) 
-                return $sql->fetchAll(PDO::FETCH_ASSOC);
-            else 
-                return [];
+            $termos = explode(' ', $termo);
+            $termo = str_replace(' ', '%', $termo);
+            foreach($termos as $termounico) {
+                $sql = "SELECT * FROM noticias WHERE ";
+                
+                for($i = 0; $i < count($termos); $i++) {
+
+                    $sql .= "(manchete LIKE '%".$termos[$i]."%' OR descricao LIKE '%".$termos[$i]."%' OR keywords LIKE '%".$termos[$i]."%')";
+                    if($i >= 0 && $i < count($termos) - 1) 
+                        $sql .= " AND ";                
+
+                }
+
+                $sql = $this->pdo->query($sql);
+                if($sql->rowCount() > 0)   {
+                    $sql = $sql->fetchAll(PDO::FETCH_ASSOC);
+                    foreach($sql as $noticia) {
+                        $noticias[] = [
+                            'id' => $noticia['id'],
+                            'manchete' => $noticia['manchete'],
+                            'descricao' => ($noticia['descricao']),
+                            'hora' => $noticia['hora'],
+                            'capa' => $noticia['capa'],
+                        ];
+                    }
+    
+                }
+            }
+            
+            return array_unique($noticias, NULL);
+            
         } else {
             return [];
         }
@@ -160,5 +186,6 @@ class NoticiaMySql implements NoticiaDao {
         $sql->bindValue(":categoria", $categoria);
         $sql->execute();
     }
+
 
 }

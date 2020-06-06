@@ -1,0 +1,51 @@
+.dropdown-search {
+    position: absolute;
+    width: 90%;
+    max-width: 1040px;
+    height: 300px;
+    border: 1px solid black;
+    top: 50px;
+    display: none;
+    flex-direction: column;
+    overflow-y: scroll;
+    background-color: white;
+    opacity: 0.97;
+}
+
+.card-noticia-dropdown {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.info-noticia-dropdown {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100px;
+    cursor: pointer;
+
+}
+.titulo-noticia-dropdown {
+    font-size: 1rem;
+    color: #C4170C;
+    word-wrap: break-word;
+    cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* number of lines to show */
+    -webkit-box-orient: vertical;
+    
+}
+.descricao-noticia-dropdown {
+    color: black;
+    opacity: 0.7;
+    word-wrap: break-word;
+    cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* number of lines to show */
+    -webkit-box-orient: vertical;
+}

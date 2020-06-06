@@ -39,29 +39,33 @@ if(isset($_GET['id'])) {
     <title><?= $noticia['manchete'];?></title>
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/noticia.css">
+    <link rel="stylesheet" href="css/header.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
         integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
     <meta name="author" content="<?= $noticia['autor'];?>">
     <meta name="description"
         content="<?= $noticia['descricao'];?>">
     <meta name="keywords" content="<?= $noticia['keywords'];?>">
-    <meta property="og:url" content="http://www.cbmnews.ga/noticia.php?id=<?=$id?>">
+    <!-- <meta property="og:url" content="http://www.cbmnews.ga/noticia.php?id=<?=$id?>"> -->
     <meta property="og:type" content="article">
     <meta property="og:title" content="<?= $noticia['manchete'];?>">
-    <meta property="og:image" itemprop="image" content="http://www.cbmnews.ga/imagens/<?= $noticia['capa'];?>">
+    <!-- <meta property="og:image" itemprop="image" content="http://www.cbmnews.ga/imagens/<?= $noticia['capa'];?>"> -->
     <meta property="og:description"
         content="<?= $noticia['descricao'];?>">
     <meta property="fb:app_id" content="296276891401563">
-    <meta name="google-site-verification" content="Lgcv139i3UZl0BzySmZe_M0mpzuSj8HU5DXBRBOBS68" />
-    <link rel="canonical" href="http://www.cbmnews.ga/noticia.php?id=<?=$id?>">
-    <script data-ad-client="ca-pub-8937799981719207" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- <link rel="canonical" href="http://www.cbmnews.ga/noticia.php?id=<?=$id?>"> -->
+   
 </head>
 
 <body onload="carregarNoticia()">
     <header>
-        <!-- <div><i class="fas fa-bars"></i><a id="menu-menu">MENU</a></div> -->
-        <div><a href="/"><img src="images/logo_png.png" height="30px" /></a></div>
-        <!-- <div><input id="search-input" type="text" class="search-input" placeholder="BUSCAR" /></div> -->
+        <div><i class="fas fa-bars"></i><a id="menu-menu"> MENU</a></div>
+        <div><a href="/"><img src="images/logo_png.png" height="30px"/></a></div>
+        <div><input id="search-input" type="text" class="search-input" placeholder="BUSCAR"/><a id="btn-search"><i class="fas fa-search"></i></a></div>
+        <div id="dropdown-search" class="dropdown-search">
+
+        </div>
     </header>
     <article>
         <div class="header-noticia">
@@ -97,6 +101,8 @@ if(isset($_GET['id'])) {
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="scripts/noticia.js"></script>
+    <script src="scripts/search.js"></script>
+
 </body>
 
 </html>

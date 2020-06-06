@@ -131,3 +131,6 @@ textarea {
 input[type="radio"] {
     margin: 5px;
 }
+label {
+    margin-left: 10px;
+}

@@ -82,7 +82,7 @@ switch($method) {
                         if($noticiaDb->add($noticia)) {
                             http_response_code(200);
                             $reponse = [
-                                "link" => "http://www.cbmnews.ga/noticia.php?id=$id"
+                                "link" => "/noticia.php?id=$id"
                             ];
 
                             echo json_encode($reponse);

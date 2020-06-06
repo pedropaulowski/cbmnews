@@ -40,6 +40,11 @@ switch($method) {
 
             if($envio) {
                 move_uploaded_file($imagem['tmp_name'], '../../imagens/' . $nomeImagem);
+                echo json_encode(
+                    [
+                        'id' => "$nomeImagem"
+                    ]
+                );
                 http_response_code(201);
 
             } else {

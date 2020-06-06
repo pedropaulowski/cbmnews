@@ -19,6 +19,7 @@ header {
     font-family: opensans,opensans-bastian,Arial,sans-serif;
     font-weight: bold;
     z-index: 5;
+
 }
 
 footer {
@@ -281,4 +282,22 @@ footer {
     }
 
 
+}
+
+.img-submited {
+    width: 90%;
+    max-width: 500px;
+    min-width: 320px;
+    margin: auto;
+    margin-top: 100px;
+}
+#btn-search {
+    margin: 5px;
+}
+#img-submited {
+    width: 90%;
+    max-width: 500px;
+    min-width: 320px;
+    margin: auto;
+    margin-top: 100px;
 }
