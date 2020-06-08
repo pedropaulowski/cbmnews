@@ -24,7 +24,7 @@
 </head>
 <body onload="getAllNoticias()">
     <header>
-        <div><i class="fas fa-bars"></i><a id="menu-menu"> MENU</a></div>
+        <!-- <div><i class="fas fa-bars"></i><a id="menu-menu"> MENU</a></div> -->
         <div><a href="/"><img src="images/logo_png.png" height="30px"/></a></div>
         <div><input id="search-input" type="text" class="search-input" placeholder="BUSCAR"/><a id="btn-search"><i class="fas fa-search"></i></a></div>
         <div id="dropdown-search" class="dropdown-search">
@@ -41,17 +41,54 @@
             <div id="btn-more" class="btn-red">VEJA MAIS</div>
 
         </div>
-        <!---<div class="aside">
-            <div class="content-aside">
+        <div class="aside">
+            <div style="border-bottom:1px solid rgb(170, 170, 170);"id="cotacao-moedas"class="content-aside">
                 <div class="header-aside">
-                    <h4>Fato ou Fake</h4>
+                    <h4>Cotação Moedas</h4>
                 </div>
-                <div class="card-aside">
+                <!--<div class="card-aside">
                     <div class="title-card-aside"><h3>O que é #FATO ou #FAKE sobre o coronavírus</h3></div>
                     <div class="img-card-aside"></div>
-                </div>
+                </div>-->
+                <!-- Para cada moeda -->
+
+
             </div>
-        </div>-->
+            <div style="border-bottom:1px solid rgb(170, 170, 170);"id="clima"class="content-aside">
+                <div class="header-aside">
+                    <h4>Clima</h4>
+                </div>
+
+
+            </div>
+            <div style="border-bottom:1px solid rgb(170, 170, 170);" id="futebol"class="content-aside">
+                <div class="header-aside header-league-name">
+                    <h4>Campeonato Alemão 2019/20</h4>
+                </div>
+                <div class="futebol-info">
+                    <table id="futebol-table"class="futebol-table">
+                        <thead>
+                            <tr>
+                                <th>Time</th>
+                                <th>PTS</th>
+                                <th>V</th>
+                                <th>E</th>
+                                <th>D</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody-futebol">
+
+                        </tbody>
+
+
+                    </table>
+
+                </div>
+
+
+            </div>
+        </div>
+
 
     </div>
     <footer>
@@ -64,7 +101,8 @@
         </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-
+    <script src="scripts/climaapi.js"></script>
+    <script src="scripts/futebolapi.js"></script>
     <script src="scripts/index.js"></script>
     <script src="scripts/search.js"></script>
     <script type="text/javascript" src="https://s.skimresources.com/js/159850X1626628.skimlinks.js"></script>

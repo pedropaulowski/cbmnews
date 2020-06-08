@@ -60,7 +60,7 @@ if(isset($_GET['id'])) {
 
 <body onload="carregarNoticia()">
     <header>
-        <div><i class="fas fa-bars"></i><a id="menu-menu"> MENU</a></div>
+        <!-- <div><i class="fas fa-bars"></i><a id="menu-menu"> MENU</a></div> -->
         <div><a href="/"><img src="images/logo_png.png" height="30px"/></a></div>
         <div><input id="search-input" type="text" class="search-input" placeholder="BUSCAR"/><a id="btn-search"><i class="fas fa-search"></i></a></div>
         <div id="dropdown-search" class="dropdown-search">

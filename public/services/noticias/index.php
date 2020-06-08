@@ -3,6 +3,7 @@
 use Classes\Noticia;
 use Dao\NoticiaMySql;
 use Dao\UsuarioMySql;
+header('Content-Type: application/json');
 
 date_default_timezone_set('America/Sao_Paulo');
 
@@ -113,14 +114,14 @@ switch($method) {
 
         if(isset($_GET['id'])) {
             // var_dump($noticiaDb->getNoticiaById($_GET['id']));
-            echo json_encode($noticiaDb->getNoticiaById($_GET['id']));
+            echo json_encode($noticiaDb->getNoticiaById($_GET['id']), JSON_PRETTY_PRINT);
             exit;
         } else if(isset($_GET['search'])) {
             $termo = $_GET['search'];
-            echo json_encode($noticiaDb->searchNoticia($termo));
+            echo json_encode($noticiaDb->searchNoticia($termo), JSON_PRETTY_PRINT);
             exit;
         } else {
-            echo json_encode($noticiaDb->getAllNoticias());
+            echo json_encode($noticiaDb->getAllNoticias(), JSON_PRETTY_PRINT);
             exit;
         }
         

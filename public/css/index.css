@@ -83,6 +83,11 @@ footer {
     bottom: 45px;
     left: 20px;
     margin: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* number of lines to show */
+    -webkit-box-orient: vertical;
 }
 
 .descricao-painel {
@@ -90,12 +95,18 @@ footer {
     bottom: 5px;
     left: 20px;
     margin: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* number of lines to show */
+    -webkit-box-orient: vertical;
 }
 
 .container{
     width: 100%;
     max-width: 1040px;
     display: flex;
+    justify-content: center;
     margin: auto;
     flex-wrap: wrap;
 }
@@ -170,6 +181,11 @@ footer {
     border: 1px solid rgb(170, 170, 170);
     border-radius: 3px;
     background-color: white;
+    display: flex;
+    justify-content: center;
+    height: max-content;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .header-aside {
     display: flex;
@@ -300,4 +316,139 @@ footer {
     min-width: 320px;
     margin: auto;
     margin-top: 100px;
+}
+
+.cotacao-moeda {
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    align-items: center;
+    opacity: 0.8;
+}
+
+.cotacao-moeda div{
+    margin: 5px;
+}
+
+.nome-moeda {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; /* number of lines to show */
+    -webkit-box-orient: vertical;
+
+}
+.pct-variacao-moeda {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 10px;
+}
+
+.card-clima-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-clima-cidade {
+    font-weight: 600;
+    opacity: 0.97;
+    margin: 0.5rem;
+}
+.card-clima-tempo {
+    opacity: 0.97;
+    margin: 0.5rem;
+}
+.card-clima-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 90%;
+    margin: 0.5rem; 
+    align-items: center;
+
+}
+.card-clima-footer div {
+
+    margin: 0px 10px;
+
+}
+.card-clima-icone {
+    font-weight: 600;
+    
+    font-size: 5.0rem;
+}
+.card-clima-temp {
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+}
+.temp-max {
+    margin-bottom: 0.5em;
+    opacity: 0.9;
+}
+.temp-min {
+    margin-top: 0.5em;
+    opacity: 0.7;
+}
+.clima-next {
+    cursor: pointer;
+    background-color: #C4170C;
+    display: flex;
+    height: 50px;
+    width: 70px;
+    justify-content: center;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+.clima-next a {
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    opacity: 1;
+
+}
+
+.header-league-name {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #C4170C;
+    font-size: 1.2rem;
+}
+
+.futebol-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th {
+    text-align: center;
+    height: 40px;
+    border: 1px solid rgb(170, 170, 170);
+}
+td {
+    text-align: center;
+    font-weight: 600;
+
+    height: 40px;
+    border: 1px solid rgb(170, 170, 170);
+}
+td img {
+    width: 50px;
+}
+
+.futebol-PTS {
+    color: black;
+}
+
+.futebol-W {
+    color: #2E9900;
+}
+
+.futebol-D {
+    color: gray;
+}
+
+.futebol-L {
+    color: #C4170C;
 }

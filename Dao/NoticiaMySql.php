@@ -71,11 +71,11 @@ class NoticiaMySql implements NoticiaDao {
                     'id' => $noticia['id'],
                     'manchete' => $noticia['manchete'],
                     'descricao' => ($noticia['descricao']),
-                    'paragrafos' => utf8_encode($noticia['paragrafos']),
+                    'paragrafos' => json_decode(utf8_encode($noticia['paragrafos']), JSON_PRETTY_PRINT),
                     'hora' => $noticia['hora'],
                     'capa' => $noticia['capa'],
                     'keywords' => $noticia['keywords'],
-                    'categoria' => $noticia['categoria'],
+                    'categoria' => utf8_encode($noticia['categoria']),
                     'autor' => $noticia['autor']
                 ];
             }
@@ -97,7 +97,7 @@ class NoticiaMySql implements NoticiaDao {
                 'id' => $noticia['id'],
                 'manchete' => $noticia['manchete'],
                 'descricao' => ($noticia['descricao']),
-                'paragrafos' => utf8_encode($noticia['paragrafos']),
+                'paragrafos' => json_decode(utf8_encode($noticia['paragrafos']), JSON_PRETTY_PRINT),
                 'hora' => $noticia['hora'],
                 'capa' => $noticia['capa'],
                 'keywords' => $noticia['keywords'],

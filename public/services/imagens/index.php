@@ -61,7 +61,7 @@ switch($method) {
     break;
 
     case 'GET':
-        echo json_encode($imagemDb->getAllImagens());
+        echo json_encode($imagemDb->getAllImagens(), JSON_PRETTY_PRINT);
     break;
 
     default:

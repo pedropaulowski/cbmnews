@@ -48,7 +48,7 @@ switch($method) {
                             'token' => $usuarioDb->logIn($email, $senha)
                         ];
                         http_response_code(200);
-                        echo json_encode($response);
+                        echo json_encode($response, JSON_PRETTY_PRINT);
 
                     } else {
                         
@@ -61,7 +61,7 @@ switch($method) {
                             'error_message' => "E-mail já utilizado!"
                         ];
                         http_response_code(422);
-                        echo json_encode($response);
+                        echo json_encode($response, JSON_PRETTY_PRINT);
                     }
                 break;
                 case "logOut":
@@ -105,7 +105,7 @@ switch($method) {
                         $response = [
                             'token' => $token
                         ]; 
-                        echo json_encode($response);
+                        echo json_encode($response, JSON_PRETTY_PRINT);
                     } else {
                         http_response_code(406);
 

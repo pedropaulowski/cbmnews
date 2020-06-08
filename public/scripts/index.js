@@ -56,9 +56,9 @@ function createPrincipalCards(noticias) {
                     
 
         ;">
-                <h5 class="categoria-painel">News</h5>
-                <h2 class="title-painel">${noticias[i].manchete.substring(0, 150)}</h2>
-                <li class="descricao-painel">${noticias[i].descricao.substring(0, 120)}...</li>
+                <h5 class="categoria-painel">${noticias[i].categoria}</h5>
+                <h2 class="title-painel">${noticias[i].manchete}</h2>
+                <li class="descricao-painel">${noticias[i].descricao}</li>
             </div>
             <div class="painel-news" onclick="redirecTo('/noticia.php?id=${noticias[i+1].id}')" style="
             transtion: all linear 0.3s;
@@ -93,9 +93,9 @@ function createPrincipalCards(noticias) {
             background-size: cover; 
             background-position: center center;
         ;">
-                <h5 class="categoria-painel">News</h5>
-                <h2 class="title-painel">${noticias[i+1].manchete.substring(0, 150)}</h2>
-                <li class="descricao-painel">${noticias[i+1].descricao.substring(0, 120)}...</li>
+                <h5 class="categoria-painel">${noticias[i+1].categoria}</h5>
+                <h2 class="title-painel">${noticias[i+1].manchete}</h2>
+                <li class="descricao-painel">${noticias[i+1].descricao}</li>
             </div>
         </div>
         <div class="painel-content">
@@ -134,9 +134,9 @@ function createPrincipalCards(noticias) {
             background-position: center center;
 
             ;">
-                <h5 class="categoria-painel">News</h5>
-                <h2 class="title-painel">${noticias[i+2].manchete.substring(0, 150)}</h2>
-                <li class="descricao-painel">${noticias[i+2].descricao.substring(0, 120)}...</li>
+                <h5 class="categoria-painel">${noticias[i+2].categoria}</h5>
+                <h2 class="title-painel">${noticias[i+2].manchete}</h2>
+                <li class="descricao-painel">${noticias[i+2].descricao}</li>
             </div>
             <div class="painel-news" onclick="redirecTo('/noticia.php?id=${noticias[i+3].id}')"
             style="
@@ -172,9 +172,9 @@ function createPrincipalCards(noticias) {
             background-size: cover; 
             background-position: center center;
             ;">
-                <h5 class="categoria-painel">News</h5>
-                <h2 class="title-painel">${noticias[i+3].manchete.substring(0, 150)}</h2>
-                <li class="descricao-painel">${noticias[i+3].descricao.substring(0, 120)}...</li>
+                <h5 class="categoria-painel">${noticias[i+3].categoria}</h5>
+                <h2 class="title-painel">${noticias[i+3].manchete}</h2>
+                <li class="descricao-painel">${noticias[i+3].descricao}</li>
             </div>
         </div>
     </div>`
@@ -245,3 +245,40 @@ function createNoticiasSecundarias(noticias) {
     }
     start +=4;
 }
+
+function getCotacaoMoedas() {
+    axios.get('https://economia.awesomeapi.com.br/json/all')
+    .then(function (response) {
+        createCotacaoCard(response.data)
+    })
+    .catch(function (error) {
+        document.getElementsByClassName('.aside')[0].innerHTML = ''
+    })
+}
+
+function createCotacaoCard(moedas) {
+    for(var i in moedas) {
+        if(moedas[i].name != 'Novo Shekel Israelense') {
+            let div = document.createElement('div')
+            let color = (moedas[i].pctChange > 0) ? '#2E9900' : '#C4170C'
+            let html = `
+            <div class="cotacao-moeda" style="width:100%;">
+                <div><a class="nome-moeda">${moedas[i].name}</a></div>
+                <div style="display:flex;width:50%;">
+                    <div style="width:50%;">
+                        <a class="preco-moeda">R$ ${moedas[i].bid.substring(0, 5).replace('.', ',')}</a>
+                    </div>
+                    <div style="width:50%;">
+                        <a style="color:${color};
+                    color:${color};" class="pct-variacao-moeda">${(moedas[i].pctChange < 0)?moedas[i].pctChange.replace('.', ','): `+`+ moedas[i].pctChange.replace('.', ',')}%</a>
+                    </div>
+
+                </div>
+            </div>`
+            div.innerHTML = html
+            document.getElementById('cotacao-moedas').appendChild(div)
+        }
+    }
+}
+
+getCotacaoMoedas()

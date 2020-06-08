@@ -88,3 +88,7 @@ blockquote:before {
 blockquote p {
     font-size: 1.5rem;
 }
+.img-paragraph {
+    width: 100%;
+    margin: 2rem 0;
+}

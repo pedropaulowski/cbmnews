@@ -84,7 +84,7 @@ function carregarNoticia() {
 function criarPagina(noticia) {
     let manchete = noticia.manchete
     let descricao = noticia.descricao
-    let paragrafos = JSON.parse(noticia.paragrafos)
+    let paragrafos = noticia.paragrafos
     let hora = new Date(noticia.hora)
     let autor = noticia.autor
     let capa = noticia.capa
@@ -130,8 +130,8 @@ function criarParagrafo(text, type) {
         
         case 'img':
             var html_code = `
-            <div style="background:url('imagens/${text}');background-size: cover;
-            background-position: center center;"id="${text}" class="img-section-noticia">
+            <div style="display:flex; justify-content: center;" >
+            <img class="img-paragraph" src="imagens/${text}"/>
             </div>
             `
             div.innerHTML = html_code

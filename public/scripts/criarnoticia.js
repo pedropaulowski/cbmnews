@@ -93,7 +93,7 @@ function publicarNoticia() {
     let capa = document.querySelector('input[name="capa_img_url"]:checked').value.trim()
     let paragrafos = getAllParagrafos()
     let keywords = document.getElementById('keywords').value.trim();
-    let categoria = 1
+    let categoria = (document.getElementById('categoria') != null) ? document.getElementById('categoria').value.trim() : 'News'
 
     axios.post('/services/noticias/', {
         action : "newNoticia",
