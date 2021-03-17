@@ -452,3 +452,19 @@ td img {
 .futebol-L {
     color: #C4170C;
 }
+
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 1px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(221, 77, 66);
+  border-radius: 1px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C4170C;
+}

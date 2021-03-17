@@ -2,7 +2,7 @@
 
 namespace Dao;
 
-use PDOException;
+
 use PDO;
 use Interfaces\NoticiaDao;
 
@@ -75,7 +75,7 @@ class NoticiaMySql implements NoticiaDao {
                     'hora' => $noticia['hora'],
                     'capa' => $noticia['capa'],
                     'keywords' => $noticia['keywords'],
-                    'categoria' => utf8_encode($noticia['categoria']),
+                    'categoria' => utf8_encode(utf8_decode($noticia['categoria'])),
                     'autor' => $noticia['autor']
                 ];
             }

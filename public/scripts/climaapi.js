@@ -195,47 +195,6 @@ function getClimaByCidade(cidades) {
     }
 }
 
-/*
-async function getAllCidades (letras,cidades) {
-
-    for(var j in letras) { 
-        if(letras[j] != 'y') {
-            try {
-                let res = await axios.get(`http://servicos.cptec.inpe.br/XML/listaCidades?city=${letras[j]}`, {
-                    responseType: "text/xml"
-                })
-                let parser = new DOMParser()
-                let xmlDOM = parser.parseFromString(res.data, 'application/xml');
-                let cidadesDaLetra = xmlDOM.querySelectorAll('cidade')
-                let cidadeSchema = {
-                    id: '',
-                    nome: ''
-                }
-                cidadesDaLetra.forEach(cidadeXmlNode => {
-                    console.log(cidadeXmlNode.getElementsByTagName('nome')[0].innerHTML)
-                    cidadeSchema.id = cidadeXmlNode.getElementsByTagName('id')[0].innerHTML
-                    cidadeSchema.nome = cidadeXmlNode.getElementsByTagName('nome')[0].innerHTML
-
-                })
-
-                cidades.push(cidadeSchema)
-            } catch (e) {
-                console.log(e)
-            }axios({
-                method: 'get',
-                url: `http://servicos.cptec.inpe.br/XML/listaCidades?city=${letras[j]}`,
-                responseType: 'application/xml'
-            })
-            .then(function (response) {
-                var res = response.data
-                var jsonResponse = xmlToJSON.parseString(res)
-                cidades.push(jsonResponse.cidades[0])
-                console.log(cidades.length)
-
-            });
-        }
-    }
-}*/
 
 function createCardPrevTempo(previsaoSchema) {
     document.getElementById('clima').innerHTML = ''
